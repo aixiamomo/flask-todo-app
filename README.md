@@ -1,5 +1,5 @@
 # flask-todo-app
 
-> Simple todo web application based on flask.
+> Simple web todo application based on flask.
 
 

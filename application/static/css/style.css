@@ -1,0 +1,79 @@
+body { background: #fefefe; color: #343434; margin: 1em; padding: 0; font-size:90%;}
+
+img { border: none }
+
+a {
+    color: #185DA0;
+    background: inherit;
+}
+
+a:hover {
+    color: #9EC068;
+    background: inherit;
+}
+
+h2 a {
+     text-decoration: none;
+}
+
+.page {
+    margin: 2em auto; width: 70em; border: 3px dashed #ccc;
+    padding: 1em; background: white;
+}
+
+hr {
+    width : 100%;
+    height : 2px;
+    background : #efefef;
+    border : 1px solid #ddd;
+    clear : both;
+}
+
+div#poweredby{
+    float : right;
+    font-size: 0.8em;
+}
+
+li {
+    font-size:120%;
+    margin-left: 2em;
+    border-bottom:1px dotted #aaa;
+    width:90%;
+    padding-top: 10px;
+}
+
+del {
+    font-size:95%; color:#555;
+}
+
+input {
+    font-size:18px;
+    line-height:22px;
+    height:26px;
+    padding:1px 3px;
+    border:1px solid #ddd;
+    width:37em;
+}
+
+button {
+    font-weight:normal;color: #171518;
+    font-size:16px;line-height:22px;height:28px;
+    width:60px;overflow:visible;
+    margin:0;
+    padding:1px 3px;
+    background-color: #638dfe;
+    border:1px solid #ddd;
+    cursor:pointer;
+}
+
+button:hover {
+    background-color:#fff;border:1px solid #aaa;color:#000;
+    -moz-box-shadow:-2px 2px 2px #ccc;
+    box-shadow:-2px 2px 2px #ccc;
+    -webkit-box-shadow:-2px 2px 2px #ccc;
+}
+
+.flash {
+    background: #fff; padding: 0.5em;
+    border: 1px solid #ccc;
+}

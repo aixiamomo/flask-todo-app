@@ -1,0 +1,42 @@
+{% extends "base.html" %}
+{% block content %}
+
+<h2>Todo</h2>
+{% if todo %}
+    <ol>
+    {% for t in todo %}
+    {% if t.status==False %}
+        <li>{{ t.title|safe }} <a href="{{ url_for('todo.del_todo', todo_id=t.id) }}" >delete</a> |
+            <a href="{{ url_for('todo.edit', todo_id=t.id) }}" >update </a> |
+            <a href="{{ url_for('todo.done', todo_id=t.id) }}" >complete</a>
+        </li>
+    {% endif %}
+    {% endfor %}
+    </ol>
+{% else %}
+    <b>nothing</b>
+{% endif %}
+
+<h2>Completed</h2>
+{% if todo %}
+    <ol>
+    {% for t in todo %}
+    {% if t.status==True %}
+        <li>
+            <del>{{ t.title|safe }}</del>
+            <a href="{{ url_for('todo.del_todo', todo_id=t.id) }}" >delete</a> |
+            <a href="{{ url_for('todo.redo', todo_id=t.id) }}" >redo</a>
+        </li>
+    {% endif %}
+    {% endfor %}
+    </ol>
+{% else %}
+    <b>nothing</b>
+{% endif %}
+
+<h2>Add</h2>
+<form method="post">
+<input id="title" name="title" placeholder="add todo item" type="text">
+<button type="submit">Submit</button>
+</form>
+{% endblock %}

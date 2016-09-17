@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+    <head>
+	    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	    <title>TODO Lists</title>
+	    <script type="text/javascript" src="{{ url_for('static', filename='js/jquery-3.1.0.js') }}"></script>
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}" type="text/css" />
+        <script type="text/javascript">
+            $(document).ready(function() {
+                $("#divPop").animate({
+                    "opacity": "hide",
+                    "width": 800,
+                    "height":30
+                },
+                1500
+                );
+            });
+        </script>
+    </head>
+
+    <body class="page">
+        <h1> TODO Lists </h1>
+        <hr>
+
+        {% block content %} {% endblock %}
+        <br />
+        {% for message in get_flashed_messages() %}
+          <div id="divPop" style="background-color: #f0f0f0; border: solid 1px #000000;width: 800px; height: 30px;">
+              <div style="text-align:center;">
+                  {{ message }}
+              </div>
+          </div>
+        {% endfor %}
+
+        <!-- footer -->
+        <hr>
+        <div id="poweredby">
+        Powered by: <a href="http://flask.pocoo.org/">Flask</a>.
+        </div>
+        <br />
+    </body>
+</html>

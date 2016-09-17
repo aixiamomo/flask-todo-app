@@ -1,0 +1,8 @@
+{% extends "base.html" %}
+{% block content %}
+<h2>Update</h2>
+<form method="post" action="{{ url_for('todo.edit', todo_id=todo.id)}}">
+    <input id="title" name="title" placeholder="update todo item" type="text">
+    <button type="submit">Update</button>
+</form>
+{% endblock %}

@@ -19,7 +19,7 @@
 
 ## Installation
 
-```python
+```
 $ git clone https://github.com/ethan-funny/flask-todo-app
 $ cd flask-todo-app
 $ mkvirtualenv flask-todo
